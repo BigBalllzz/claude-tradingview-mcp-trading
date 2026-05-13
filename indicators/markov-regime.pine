@@ -18,8 +18,8 @@ rsi = ta.rsi(close, rsiLen)
 
 // === State Classification: 0=Bull, 1=Neutral, 2=Bear ===
 state = close > ema and rsi > rsiHigh ? 0 :
-        close < ema and rsi < rsiLow  ? 2 :
-        1
+     close < ema and rsi < rsiLow  ? 2 :
+     1
 
 stateName(s) =>
     s == 0 ? "Bull" : s == 1 ? "Neutral" : s == 2 ? "Bear" : "n/a"
